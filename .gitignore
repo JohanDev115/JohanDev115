@@ -1,0 +1,9 @@
+#ignore images
+
+*.png
+
+*.jpg
+
+*.svg
+
+*.txt
