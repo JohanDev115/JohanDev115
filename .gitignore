@@ -1,9 +1,9 @@
 #ignore images
 
-*.png
+# *.png
 
-*.jpg
+# *.jpg
 
-*.svg
+# *.svg
 
-*.txt
+# *.txt
