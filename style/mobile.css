@@ -252,6 +252,7 @@ body {
 
 .ide_img {
     height: 80px;
+    margin-bottom: 8px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
