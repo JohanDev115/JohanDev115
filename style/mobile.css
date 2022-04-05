@@ -11,6 +11,7 @@
     --primary-green: #378c84;
     --secondary-green: #49BF9E;
     --just-white: #FFFFFF;
+    --light-blue: #0FFFFB;
 }
 
 * {
@@ -45,11 +46,38 @@ body {
     color: var(--secondary-green);
 }
 
-.main-header_logo {
+.logo {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 14px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 350px;
+    align-items: center;
+}
+
+.logo img {
+    grid-row: 1 / 3;
     width: 140px;
     height: 140px;
     align-self: center;
-    margin-top: 28px;
+    justify-self: flex-end;
+}
+
+.logo__title {
+    font-size: 3.8rem;
+    color: var(--just-white);
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+.logo__subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    align-self: flex-start;
+    margin-top: 4px;
+    color: var(--light-blue);
 }
 
 .nav-bar {
@@ -58,21 +86,48 @@ body {
     align-self: center;
     width: 100%;
     min-width: 300px;
-    max-width: 620px;
+    max-width: 510px;
     margin-top: 24px;
     margin-bottom: 16px;
 }
 
 .nav-bar_link {
+    position: relative;
     display: inline-block;
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--just-white);
-    text-decoration: none;
+    box-sizing: content-box;
+    width: 52px;
+    height: 51px;
+    border: 3px solid var(--light-blue);
+    padding: 6px;
+    transition: all .2s ease-in-out;
+}
+
+.nav-bar_link img {
+    width: 100%;
+    height: 100%;
 }
 
 .nav-bar_link:hover {
-    color: var(--secondary-green);
+    transform: scale(1.1);
+}
+
+.nav-bar_link:hover > .tooltip {
+    visibility: visible;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: var(--light-blue);
+    color: var(--bg-blue);
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    margin-left: -50px;
 }
 
 .flex-container {
@@ -562,6 +617,31 @@ body {
     .info-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .main-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav-bar {
+        justify-self: flex-end;
+    }
+
+    .logo img {
+        grid-row: 1 / 3;
+        width: 180px;
+        height: 180px;
+        align-self: center;
+        justify-self: flex-end;
+    }
+    
+    .logo__title {
+        font-size: 4.6rem;
+    }
+    
+    .logo__subtitle {
+        font-size: 1.8rem;
     }
 }
 
