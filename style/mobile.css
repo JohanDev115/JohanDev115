@@ -512,6 +512,7 @@ body {
     background-color: transparent;
     color: var(--light-blue);
     cursor: pointer;
+    transition: transform .5s;
 }
 
 .card_btn {
@@ -534,6 +535,10 @@ body {
 .btn:hover {
     background-color: var(--light-blue);
     color: var(--bg-blue);
+}
+
+.btn:hover:not(.card_btn) {
+    transform: scale(1.1);
 }
 
 .footer {
