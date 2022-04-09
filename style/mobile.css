@@ -642,7 +642,7 @@ body {
     }
 
     .nav-bar {
-        justify-self: flex-end;
+        justify-self: center;
     }
 
     .logo img {
