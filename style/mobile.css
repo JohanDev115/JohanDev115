@@ -59,6 +59,7 @@ body {
     text-decoration: none;
     transform: translateX(-600px);
     transition: transform 1s ease-in-out;
+    opacity: 0;
 }
 
 .logo img {
@@ -96,6 +97,7 @@ body {
     margin-bottom: 16px;
     transform: translateX(600px);
     transition: transform 1s ease-in-out;
+    opacity: 0;
 }
 
 .nav-bar_link {
@@ -164,6 +166,12 @@ body {
     color: var(--just-white);
     transform: translateX(800px);
     transition: transform 1s ease-in-out;
+    opacity: 0;
+}
+
+.introdution__title {
+    opacity: 0%;
+    transition: opacity 1s ease-in-out;
 }
 
 .image-container {
@@ -176,6 +184,7 @@ body {
     border: 3px solid var(--light-blue);
     transform: translateX(-800px);
     transition: transform 1s ease-in-out;
+    opacity: 0;
 }
 
 .short-info {
@@ -205,6 +214,7 @@ body {
     background-color: var(--primary-blue);
     transform: translateX(-800px);
     transition: transform 1s ease-out;
+    opacity: 0;
 }
 
 .skill-list {
@@ -221,6 +231,7 @@ body {
     background-color: var(--primary-blue);
     transform: translateX(-800px);
     transition: transform 1s ease-out;
+    opacity: 0;
 }
 
 .subtitle {
@@ -343,6 +354,7 @@ body {
     background-color: var(--primary-blue);
     transform: translateX(-800px);
     transition: transform 1s ease-out;
+    opacity: 0;
 }
 
 .education-list {
@@ -441,6 +453,7 @@ body {
     background-color: var(--primary-blue);
     transform: translateX(-800px);
     transition: transform 1s ease-out;
+    opacity: 0;
 }
 
 .work-experience-list {
@@ -473,6 +486,7 @@ body {
     background-color: var(--primary-blue);
     transform: translateX(-800px);
     transition: transform 1s ease-out;
+    opacity: 0;
 }
 
 .cards {
@@ -814,4 +828,5 @@ body {
 
 .normalState {
     transform: translateX(0);
+    opacity: 100%;
 }
