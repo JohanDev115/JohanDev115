@@ -1,16 +1,17 @@
 var diplomas = document.getElementById("diplomas");
 
-var btn = document.getElementById("show-diplomas");
+var showDiplomas = document.getElementById("show-diplomas");
 
-var span = document.getElementsByClassName("close")[0];
+var closeDiplomas = document.getElementById("closeDiplomas");
 
-btn.onclick = function() {
+showDiplomas.onclick = function() {
   diplomas.style.display = "block";
 }
 
-span.onclick = function() {
+closeDiplomas.onclick = function() {
   diplomas.style.display = "none";
 }
+
 
 let slideIndex1 = 0;
 let slideIndex2 = 0;
