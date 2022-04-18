@@ -43,7 +43,7 @@
 }
 
 .projects {
-    transform: translateY(300px);
+    transform: translateY(150px);
     transition: transform .5s ease-out;
 }
 
