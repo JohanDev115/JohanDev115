@@ -331,15 +331,15 @@ body {
 }
 
 .framework_img--vuejs {
-    background-image: url('../assets/images/vuejs.png');
+    background-image: url('../assets/icons/vuejs.png');
 }
 
 .framework_img--reactjs {
-    background-image: url('../assets/images/reactjs.png');
+    background-image: url('../assets/icons/reactjs.png');
 }
 
 .framework_img--angular {
-    background-image: url('../assets/images/angular.png');
+    background-image: url('../assets/icons/angular.png');
 }
 
 .ides {
@@ -367,7 +367,7 @@ body {
 }
 
 .ide_img--vsc {
-    background-image: url('../assets/images/vsc.png');
+    background-image: url('../assets/icons/vsc.png');
 }
 
 .education {
@@ -452,20 +452,16 @@ body {
 
 .diploma {
     width: 100%;
-    max-width: 420px;
+    height: 270px;
+    max-width: 480px;
     min-width: 365px;
     margin: 0 20px;
-}
-
-.diploma__image {
-    width: 100%;
-    height: 280px;
     border: 4px solid var(--light-blue);
+    overflow-y: scroll;
 }
 
-.diploma__image > img {
+.diploma > img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
