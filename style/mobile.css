@@ -344,6 +344,7 @@ body {
 
 .ides {
     max-width: 400px;
+    margin-bottom: 30px;
 }
 
 .ides-container {
@@ -368,6 +369,39 @@ body {
 
 .ide_img--vsc {
     background-image: url('../assets/icons/vsc.png');
+}
+
+.others {
+    max-width: 400px;
+}
+
+.others-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.other_name {
+    font-size: var(--h3);
+    font-weight: 500;
+    text-align: center;
+    color: var(--just-white);
+}
+
+.other_img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.other_img--git {
+    background-image: url('../assets/icons/git.png');
+}
+
+.other_img--figma {
+    background-image: url('../assets/icons/figma.png');
 }
 
 .education {
