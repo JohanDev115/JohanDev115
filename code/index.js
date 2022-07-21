@@ -15,12 +15,12 @@ closeDiplomas.onclick = function() {
 
 let slideIndex1 = 0;
 let slideIndex2 = 0;
-// let slideIndex3 = 0;
+let slideIndex3 = 0;
 var time = 4000;
 
 showSlides1();
 showSlides2();
-// showSlides3();
+showSlides3();
 
 function showSlides1() {
   let i;
@@ -46,6 +46,19 @@ function showSlides2() {
 
   slides[slideIndex2-1].style.display = "block";  
   setTimeout(showSlides2, time);
+}
+
+function showSlides3() {
+  let i;
+  let slides = document.getElementsByClassName("slidemuviz");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex3++;
+  if (slideIndex3 > slides.length) {slideIndex3 = 1}    
+
+  slides[slideIndex3-1].style.display = "block";  
+  setTimeout(showSlides3, time);
 }
 
 window.onclick = function(event) {
