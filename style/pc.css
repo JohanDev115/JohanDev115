@@ -42,10 +42,6 @@
     transform: translateX(800px);
 }
 
-.s_and_w {
-    transform: translateY(150px);
-}
-
 .projects {
     transform: translateY(150px);
 }

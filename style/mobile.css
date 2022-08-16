@@ -12,6 +12,7 @@
     --light-blue: #0FFFFB;
 
     --content-margin: 20px;
+    --info-section-margin: 650px;
 }
 
 * {
@@ -209,7 +210,7 @@ body {
 
 .skills {
     width: 100%;
-    max-width: 600px;
+    max-width: var(--info-section-margin);
     margin-top: var(--content-margin);
     padding: 16px;
     background-color: var(--primary-blue);
@@ -226,7 +227,7 @@ body {
 
 .knowledge {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     margin-top: var(--content-margin);
     padding: 16px;
     background-color: var(--primary-blue);
@@ -305,6 +306,10 @@ body {
     width: 60%;
 }
 
+.language_progress-bar--ts {
+    width: 50%;
+}
+
 .frameworks {
     max-width: 400px;
     margin-bottom: 30px;
@@ -360,7 +365,8 @@ body {
 }
 
 .ide_img {
-    height: 80px;
+    /* width: 70px; */
+    height: 70px;
     margin-bottom: 8px;
     background-position: center;
     background-repeat: no-repeat;
@@ -369,6 +375,10 @@ body {
 
 .ide_img--vsc {
     background-image: url('../assets/icons/vsc.png');
+}
+
+.ide_img--windows_terminal {
+    background-image: url('../assets/icons/Windows_Terminal.png');
 }
 
 .others {
@@ -406,7 +416,7 @@ body {
 
 .education {
     width: 100%;
-    max-width: 600px;
+    max-width: var(--info-section-margin);
     margin-top: var(--content-margin);
     padding: 16px;
     background-color: var(--primary-blue);
@@ -501,7 +511,7 @@ body {
 
 .work-experience {
     width: 100%;
-    max-width: 600px;
+    max-width: var(--info-section-margin);
     margin-top: var(--content-margin);
     padding: 16px;
     background-color: var(--primary-blue);
@@ -604,7 +614,7 @@ body {
 
 .s_and_w {
     width: 100%;
-    max-width: 800px;
+    max-width: var(--info-section-margin);
     margin-top: var(--content-margin);
     margin-left: auto;
     margin-right: auto;
@@ -628,25 +638,46 @@ body {
     margin: 0 auto;
 }
 
-/* .strengths {
-    margin-bottom: 20px;
-} */
+.title--strengths {
+    color: #2aff0a;
+}
 
-.content-box__title {
+.title--weaknesses {
+    color: #fc2313;
+}
+
+/* .content-box__title {
     font-size: var(--h2);
     font-weight: 500;
     color: var(--just-white);
     margin-bottom: 12px;
     text-align: center;
-}
+} */
 
 .content-box ul {
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    list-style: none;
 }
 
 .content-box ul li {
     font-size: var(--p);
     color: var(--just-white);
+}
+
+.strengths ul li {
+    color: #2aff0a;
+}
+
+.strengths ul li::before {
+    content: '+ ';
+}
+
+.weaknesses ul li {
+    color: #fc2313;
+}
+
+.weaknesses ul li::before {
+    content: '- ';
 }
 
 .projects {
