@@ -627,14 +627,14 @@ body {
 
 .boxes-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     justify-content: space-evenly;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .content-box {
     padding: 12px 8px;
-    width: 280px;
+    /* width: 280px; */
     margin: 0 auto;
 }
 
