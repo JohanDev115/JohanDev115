@@ -299,15 +299,15 @@ body {
 }
 
 .language_progress-bar--css {
-    width: 75%;
+    width: 80%;
 }
 
 .language_progress-bar--js {
-    width: 60%;
+    width: 70%;
 }
 
 .language_progress-bar--ts {
-    width: 50%;
+    width: 60%;
 }
 
 .frameworks {
