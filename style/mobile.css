@@ -887,13 +887,13 @@ body {
     padding: 16px 0;
 }
 
-.web-pages {
-    margin-bottom: 20px;
+.project-section {
+    margin-bottom: 30px;
     padding: 16px 0;
     background-color: var(--primary-blue);
 }
 
-.web-pages__title {
+.project-section__title {
     font-size: 2.6rem;
 }
 
