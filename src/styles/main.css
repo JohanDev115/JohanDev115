@@ -260,6 +260,7 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
+    margin-top: 0;
     padding: 0;
     z-index: 1;
     background-color: rgba(0,0,0,0.4); 
@@ -267,7 +268,10 @@ button:hover {
 }
 
 .diplomas {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
     padding: 32px 16px;
     background-color: var(--primary-blue);
     animation-name: animatetop;

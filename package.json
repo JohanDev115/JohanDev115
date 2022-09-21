@@ -7,7 +7,7 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack-dev-server --config webpack.config.dev.js",
     "build-prod": "webpack --config webpack.config.js",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "javascript"

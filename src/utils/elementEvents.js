@@ -15,6 +15,18 @@ function elementEvents() {
         });
     }
 
+    if (getHash() == "home") {
+        const modal = document.querySelector('#diplomas');
+        const btn = document.querySelector('#show-diplomas');
+        const btnClose = document.querySelector('#closeDiplomas');
+        btn.addEventListener('click', () => {
+            modal.style.display = "block";
+        })
+        btnClose.addEventListener('click', () => {
+            modal.style.display = "none";
+        })
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
