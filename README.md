@@ -1,4 +1,0 @@
-- 👋 Hi, I’m @JohanDev115
-- 👀 I’m interested in software developer
-- 🌱 I’m currently learning at platzi
-- 💞️ I’m looking to collaborate on many projects
