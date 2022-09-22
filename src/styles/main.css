@@ -237,7 +237,6 @@ button:hover {
 .intro-profile__photo {
     display: block;
     width: 100%;
-    height: 300px;
     margin: 0 auto;
     margin-bottom: 16px;
     border: 3px solid var(--light-blue);
@@ -698,15 +697,12 @@ footer {
     transition: transform .5s;
 }
 
-.blog-header {
-    display: grid;
-    grid-template-columns: 50px 1fr 110px;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: var(--primary-blue);
-    color: var(--just-white);
-    margin-bottom: var(--section-margin);
+.header--blog {
+    grid-template-columns: 80px 1fr 120px;
+}
+
+.header--blog > .title {
+    margin-bottom: 0;
 }
 
 .blog-header--mobile {
@@ -840,6 +836,10 @@ footer {
         margin-bottom: 0;
     }
 
+    .header--blog {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .logo img {
         width: 180px;
         height: 180px;
@@ -881,6 +881,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1.2fr;
         column-gap: 20px;
+    }
+
+    .intro-profile__photo {
+        height: 320px;
     }
 
     .skills {

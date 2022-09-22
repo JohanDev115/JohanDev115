@@ -1,6 +1,6 @@
 const Blog = () => {
     const view = `
-        <header class="header">
+        <header class="header header--blog">
             <a class="blog-header__icon" id="menu-side-nav">
                 <div></div>
                 <div></div>
