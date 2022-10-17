@@ -1,0 +1,19 @@
+.button {
+  display: block;
+  padding: 8px 16px;
+  font-size: $button;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid $secondary-color;
+  background-color: transparent;
+  color: $secondary-color;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $secondary-color;
+  color: $bg-color;
+  border-color: $secondary-color;
+}

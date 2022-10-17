@@ -5,8 +5,8 @@ const Biography = () => {
     const view = `
         ${Header('My Biography')}
         <main>
-            <section class="biography-container">
-                <div class="johan-image">
+            <section class="biography">
+                <div class="biography__image">
                     <img src="${user.photo}" alt="${user.biography.firstName} ${user.biography.lastName}">
                 </div>
                 <div class="personal-info">
@@ -24,15 +24,13 @@ const Biography = () => {
                 <div class="history">
                     <p>${user.biography.history}</p>
                     <h3>More things i've done</h3>
-                    <ul>
+                    <ul class="list">
                         ${user.biography.achieves.map(achieve => `
                             <li>${achieve}</li>
                         `).join('')}
                     </ul>
                 </div>
-                <button class="biography-button">
-                    <a class="btn" href="#home">Go Home</a>
-                </button>
+                <a class="button-link biography__button" href="/">Go Home</a>
             </section>
         </main>
     `;

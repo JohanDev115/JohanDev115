@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  padding: 16px;
+  background-color: $sections-color;
+  text-align: center;
+  &__title {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+  &__link {
+    width: 60px;
+    height: 60px;
+  }
+  &__github {
+    font-size: 2rem;
+    a {
+      margin-top: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: $secondary-color;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  &__copy {
+    margin-top: 16px;
+    font-size: 1.4rem;
+  }
+}

@@ -15,30 +15,47 @@ function elementEvents() {
         });
     }
 
-    if (getHash() == "home") {
+    if (getHash() == "") {
         const modal = document.querySelector('#diplomas');
         const btn = document.querySelector('#show-diplomas');
         const btnClose = document.querySelector('#closeDiplomas');
-        btn.addEventListener('click', () => {
-            modal.style.display = "block";
-        })
-        btnClose.addEventListener('click', () => {
-            modal.style.display = "none";
-        })
-    }
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
+        const openModal = () => {
+            modal.style.display = "block";
+            document.querySelector("modal-header").focus();
+        }
+
+        const closeModal = () => {
+            modal.style.display = "none";
+        }
+
+        btn.addEventListener('click', () => {
+           openModal();
+        })
+
+        btnClose.addEventListener('click', () => {
+            closeModal();
+        })
+
+        document.body.addEventListener("keydown", (evt) => {
+            if (evt.keyCode == 27) {
+                closeModal();
             }
         });
-    });
+    }
 
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach(el => observer.observe(el));
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('show');
+    //         } else {
+    //             entry.target.classList.remove('show');
+    //         }
+    //     });
+    // });
+
+    // const hiddenElements = document.querySelectorAll('.hidden');
+    // hiddenElements.forEach(el => observer.observe(el));
 }
 
 export default elementEvents;

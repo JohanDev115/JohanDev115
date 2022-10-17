@@ -1,0 +1,83 @@
+.knowledge__subtitle {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.knowledge__section {
+  margin-bottom: 20px;
+}
+
+.knowledge__section:last-child {
+  margin-bottom: 0;
+}
+
+.language {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 1.6rem;
+  span {
+    display: inline-block;
+    background-color: $secondary-color;
+    border-radius: 16px;
+    color: $bg-color;
+    margin-right: 8px;
+    padding: 4px 8px;
+    font-weight: 500;
+  }
+}
+
+.program-language {
+  display: grid;
+  height: 40px;
+  grid-template-columns: 100px 1fr;
+  place-items: center;
+  font-size: 1.6rem;
+  label {
+    font-size: 1.6rem;
+    justify-self: left;
+  }
+  meter {
+    width: 100%;
+    height: 45px;
+  }
+}
+
+.technologies {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-evenly;
+  // list-style: none;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  min-width: max-content;
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__name {
+    font-size: $p;
+  }
+}
+
+.technology:last-child {
+  margin-right: 0;
+}

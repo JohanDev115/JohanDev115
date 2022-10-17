@@ -16,6 +16,7 @@ const config = {
     alias: {
       '@utils': path.resolve(__dirname, 'src/utils/'),
       '@templates': path.resolve(__dirname, 'src/templates/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@styles': path.resolve(__dirname, 'src/styles/'),
       '@images': path.resolve(__dirname, 'src/assets/images/')
@@ -28,11 +29,19 @@ const config = {
           use: 'babel-loader',
           exclude: /node_modules/
         },
+        // {
+        //   test: /\.css$/i,
+        //   use: [MiniCssExtractPlugin.loader, 
+        //       'css-loader'
+        //   ],
+        // },
         {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 
-              'css-loader'
-          ],
+          test: /\.s[ac]ss$/i,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader'
+          ]
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,

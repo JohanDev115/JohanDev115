@@ -1,8 +1,10 @@
 import router from './routes/index';
-import '@styles/main.css';
+import '@styles/main.scss';
+if (window.innerWidth >= 1024) {
+    import('@styles/desktop.scss');
+}
 
-window.addEventListener('load', () => {
-    location.hash = "home"
+window.addEventListener('load', () => { 
     router();
 });
 

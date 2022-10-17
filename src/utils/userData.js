@@ -7,16 +7,17 @@ import IdiplomaSTC from '@images/diplomas/System_Technician_certificate.webp';
 import IdiplomaTC from '@images/diplomas/teamwork_certificate.webp';
 
 /** Icons */
-import Ivsc from '@images/icons/vsc.svg';
-import Igit from '@images/icons/git.svg';
-import Ifigma from '@images/icons/figma.svg';
-import Ibook from '@images/icons/book.png';
-import Imicrophone from '@images/icons/microphone.png';
-import Ijoystick from '@images/icons/joystick.png';
-import Ifacebook from '@images/icons/facebook.png';
-import Iinstagram from '@images/icons/instagram.png';
-import Itwitter from '@images/icons/twitter.png';
-import Ilinkeind from '@images/icons/linkedin.png';
+import Ivsc from '@images/logos/vsc.svg';
+import Igit from '@images/logos/git.svg';
+import Ifigma from '@images/logos/figma.svg';
+import Isass from '@images/logos/sass.svg';
+import Ibook from '@images/icons/book.svg';
+import Imicrophone from '@images/icons/microphone.svg';
+import Ijoystick from '@images/icons/joystick.svg';
+import Ifacebook from '@images/icons/facebook.svg';
+import Iinstagram from '@images/icons/instagram.svg';
+import Itwitter from '@images/icons/twitter.svg';
+import Ilinkeind from '@images/icons/linkedin.svg';
 
 /** Projects */
 import Ibatatabit from '@images/projects/batatabit.webp';
@@ -101,34 +102,32 @@ const user = {
             }
         ],
         programLanguages: [
-        {
-            id: "html",
-            name: "HTML",
-            level: "90"
-        },
-        {
-            id: "css",
-            name: "CSS",
-            level: "85"
-        },
-        {
-            id: "js",
-            name: "JavaScript",
-            level: "70"
-        },
-        {
-            id: "ts",
-            name: "TypeScript",
-            level: "60"
-        }
+            {
+                id: "html",
+                name: "HTML",
+                level: "90"
+            },
+            {
+                id: "css",
+                name: "CSS",
+                level: "85"
+            },
+            {
+                id: "js",
+                name: "JavaScript",
+                level: "70"
+            },
+            {
+                id: "ts",
+                name: "TypeScript",
+                level: "60"
+            }
         ],
-        ides: [
+        technologies: [
             {
                 name: "Visual Studio Code",
                 icon: Ivsc
             },
-        ],
-        others: [
             {
                 name: "GIT",
                 icon: Igit
@@ -136,6 +135,10 @@ const user = {
             {
                 name: "FIGMA",
                 icon: Ifigma
+            },
+            {
+                name: "Sass",
+                icon: Isass
             }
         ]
     },
@@ -145,7 +148,7 @@ const user = {
             icon: Ibook
         },
         {
-            name: "Sign",
+            name: "Sing",
             icon: Imicrophone
         },
         {
@@ -182,14 +185,12 @@ const user = {
                 description: "Babatabit is a platform that helps with the exchange of cryptocurrencies made with the use of the first mobile rule and focused on the use of the BEM methodology carried out as a form of practice of the mobile first concept with the help of Diego de Granda professor and Software Engineering Manager at Platzi.",
                 image: Ibatatabit,
                 link: "https://johandev115.github.io/Batatabit/",
-                className: "slidebatatabit fade"
             },
             {
                 title: "Muviz",
                 description: "Muviz is a not a functional project about Movies made with the use of Axios which is a tool that help us with the use of APIS and make dinamic pages with the use of DOM with help of JAVASCRIPT, this is one of the most important projects tha i have made for me.",
                 image: Imuviz,
                 link: "https://johandev115.github.io/muviz/#home",
-                className: "slidemuviz fade"
             },
             {
                 title: "Rick and Morty",

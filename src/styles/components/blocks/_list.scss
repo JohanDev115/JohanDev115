@@ -1,0 +1,9 @@
+.list {
+  margin-left: 20px;
+  li {
+    font-size: $p;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+}

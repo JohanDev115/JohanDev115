@@ -1,0 +1,81 @@
+$Font: 'Ubuntu', sans-serif;
+$bg-color: #194B5F;
+$sections-color: #205B73;
+$cards-color: #307b8c;
+$primary-color: #ffffff;
+$secondary-color: #0FFFFB;
+$p: 1.6rem;
+$title: 2.6rem;
+$subtitle: 2.2rem;
+$button: 1.7rem;
+$p-section: 16px;
+$m-section: 24px;
+
+@mixin image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/ubuntu-regular.woff2') format('woff2'),
+  url('../assets/fonts/ubuntu-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $Font;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $primary-color;
+  background-color: $bg-color;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: $p;
+}
+
+hr {
+  margin-bottom: 40px;
+}
+
+::-webkit-meter-optimum-value {
+  background-color: $secondary-color;
+}
+
+::-webkit-meter-bar {
+  background-color: $cards-color;
+  border: $secondary-color;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $bg-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0ed6d3;
+}

@@ -1,13 +1,13 @@
 import Home from "@pages/Home";
+import Portfolio from "@pages/Portfolio";
 import Blog from "@pages/Blog";
 import Biography from "@pages/Bioghrapy";
 import Footer from "@templates/Footer";
 import getHash from "@utils/getHash";
-import Portfolio from "@pages/Portfolio";
 import elementEvents from "@utils/elementEvents";
 
 const routes = {
-    'home': Home,
+    '': Home,
     'portfolio': Portfolio,
     'blog': Blog,
     'biography': Biography

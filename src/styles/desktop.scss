@@ -1,0 +1,111 @@
+.header_home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.banner__logo {
+  grid-template-columns: 1fr 1fr;
+  width: 180px;
+  height: 180px;
+}
+
+.banner__title {
+  font-size: 4.6rem;
+}
+
+.banner__subtitle {
+  font-size: 1.8rem;
+}
+
+.nav-bar {
+  justify-self: center;
+}
+
+.main_home {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  column-gap: 30px;
+  justify-content: center;
+  grid-template-areas:  "intro          intro"
+                        "skills     knowledge"
+                        "education  knowledge"
+                        "work-exp   knowledge"
+                        "qualities  knowledge"
+                        "hobbies      hobbies"
+                        "projects    projects";
+}
+
+.section {
+  max-width: 100%;
+}
+
+.intro {
+  grid-area: intro;
+  max-width: 100%;
+}
+
+.intro-content {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  column-gap: 20px;
+  &__photo {
+    height: 320px;
+  }
+}
+
+
+.skills {
+  grid-area: skills;
+  width: 90%;
+  justify-self: center;
+}
+
+.education {
+  grid-area: education;
+  width: 90%;
+  justify-self: center;
+}
+
+.work-experience {
+  grid-area: work-exp;
+  width: 90%;
+  justify-self: center;
+}
+
+.qualities {
+  grid-area: qualities;
+  width: 90%;
+  justify-self: center;
+}
+
+.knowledge {
+  grid-area: knowledge;
+  width: 90%;
+  justify-self: center;
+}
+
+.hobbies {
+  grid-area: hobbies;
+  width: 90%;
+  justify-self: center;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+@media only screen and (min-width: 1120px) {
+  .projects_home {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.header_blog {
+  grid-template-columns: 1fr 150px;
+  &__icon {
+    display: none;
+  }
+}

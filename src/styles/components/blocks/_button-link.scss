@@ -1,0 +1,22 @@
+.button-link {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    border: 3px solid;
+    font-size: $button;
+    background-color: transparent;
+    color: $secondary-color;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-link:hover,
+.button-link:focus {
+    background-color: $secondary-color;
+    color: $bg-color;
+    border-color: $secondary-color;
+}

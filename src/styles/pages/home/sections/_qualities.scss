@@ -1,0 +1,23 @@
+.qualities__content {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-evenly;
+}
+
+.qualities__list {
+  padding: 12px 8px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.qualities__list li {
+  font-size: 1.6rem;
+}
+
+.strengths li::before {
+  content: '+ ';
+}
+
+.weaknesses li::before {
+  content: '- ';
+}

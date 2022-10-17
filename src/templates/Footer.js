@@ -2,12 +2,13 @@ import user from '@utils/userData';
 
 const Footer = () => {
     const view = `
-        <footer>
-            <h1 class="title">Contact Me</h1>
-            <div class="links-container">
+        <footer class="footer">
+            <h2 class="footer__title">Contact Me</h2>
+            <div class="footer__links">
                 ${user.socials.map(social => `
-                    <a class="link" target="_blank" href="${social.href}">
+                    <a class="icon-link footer__link" target="_blank" href="${social.href}">
                         <img src="${social.iconUrl}" alt="${social.name}"/>
+                        <span class="tooltip">${social.name}</span>
                     </a>
                 `).join('')}
             </div>

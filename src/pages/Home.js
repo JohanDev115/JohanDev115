@@ -1,162 +1,151 @@
 import user from "@utils/userData";
 import nav from "@utils/nav";
-import Project from "@templates/Project";
+import Project from "@components/Project";
 
 const Home = () => {
     const view = `
-        <header class="main-header">
-            <a href="#home" class="logo fadeInLeft">
-                <img src="${user.logo}" alt="JohanDev">
-                <h1 class="logo__title">${user.name}</h1>
-                <h3 class="logo__subtitle">${user.profession}</h3>
-            </a>
+        <header class="header header_home">
+            <aside class="banner fadeInLeft">
+                <a href="/" class="banner__logo fadeInLeft">
+                    <img src="${user.logo}" alt="refresh page">
+                </a>
+                <h1 class="banner__title">${user.name}</h1>
+                <h2 class="banner__subtitle">${user.profession}</h2>
+            </aside>
             <nav class="nav-bar fadeInRight">
                 ${nav.map(link => `
-                    <a href="${link.hash}" class="nav-bar_link">
+                    <a href="${link.hash}" class="icon-link nav-bar__link">
                         <img src="${link.iconUrl}" alt="${link.name}">
                         <span class="tooltip">${link.name}</span>
                     </a>
                 `).join('')}
             </nav>
         </header>
-        <main class="home-main">
-            <section class="introdution">
-                <h1 class="title appear">¿Who am I?</h1>
-                <div class="intro-profile">
-                    <div class="intro-profile__photo fadeInLeft">
+        <main class="main_home">
+            <section class="section intro">
+                <h2 class="section__title appear">About Me</h2>
+                <div class="intro-content">
+                    <div class="intro-content__photo fadeInLeft">
                         <img src="${user.photo}" alt="${user.name}">
                     </div>
-                    <p class="intro-profile__aboutme fadeInRight">${user.aboutme}</p>
+                    <p class="intro-content__description fadeInRight">${user.aboutme}</p>
                 </div>
             </section>
-            <section class="skills hidden">
-                <h1 class="title">Skills</h1>
-                <ul class="skill-list">
+            <section class="section skills">
+                <h2 class="section__title">Skills</h2>
+                <ul class="list skill-list">
                     ${user.skills.map(skill => `
                         <li>${skill}</li>  
                     `).join('')}
                 </ul>
             </section>
-            <section class="education hidden">
-                <h1 class="title">Education</h1>
-                <ul class="education-list">
+            <section class="section education">
+                <h2 class="section__title">Education</h2>
+                <ul class="list education__list">
                     ${user.education.map(item => `
                         <li>${item}</li>  
                     `).join('')}
                 </ul>
-                <button id="show-diplomas">See Diplomas</button>
+                <button class="button education__button" id="show-diplomas">See Diplomas</button>
             </section>
             <section class="modal" id="diplomas">
                 <div class="diplomas">
-                    <span class="close-btn" id="closeDiplomas">&times;</span>
-                    <h1 class="title">Diplomas</h1>
-                    <div class="diplomas__container">
+                    <button class="diplomas__close-button" id="closeDiplomas">&times;</button></a>
+                    <h2 class="section__title" id="modal-header" tabindex="0">Diplomas</h2>
+                    <div class="diplomas__content">
                         ${user.diplomas.map(diploma => `
-                            <div class="diploma">
-                                <img src="${diploma.image}" alt="${diploma.name}">
+                            <div class="diploma" tabindex="0">
+                                <img src="${diploma.image}" alt="diploma de ${diploma.name}">
                             </div>
                         `).join('')}
                     </div>
                 </div>
             </section>
-            <section class="work-experience hidden">
-                <h1 class="title">Work Experience</h1>
-                <div class="work-experience-list">
+            <section class="section work-experience">
+                <h2 class="section__title">Work Experience</h2>
+                <ul class="list work-experiences">
                     ${user.workExperience.map(job => `
-                        <aside class="work-experience">
-                            <h3>${job.name}</h3>
-                            <p>${job.date}</p>
-                            <ul>
+                        <li class="job">
+                            <h4 class="job__title">${job.name}</h4>
+                            <p class="job__date">${job.date}</p>
+                            <ul class="list">
                                 ${job.obligations.map(obligation => `
                                     <li>${obligation}</li>
                                 `).join('')}
                             </ul>
-                        </aside>
+                        </li>
                     `).join('')}
+                </ul>
+            </section>
+            <section class="section qualities">
+                <h1 class="section__title"><span class="title--strengths">Strengths</span> and <span class="title--weaknesses">Weaknesses</span></h1>
+                <div class="qualities__content">
+                    <ul class="qualities__list strengths">
+                        ${user.quality.strengths.map(quality => `
+                            <li>${quality}</li>
+                        `).join('')}
+                    </ul>
+                    <ul class="qualities__list weaknesses">
+                        ${user.quality.weaknesess.map(quality => `
+                            <li>${quality}</li>
+                        `).join('')}
+                    </ul>
                 </div>
             </section>
-            <section class="qualities hidden">
-                <h1 class="title"><span class="title--strengths">Strengths</span> and <span class="title--weaknesses">Weaknesses</span></h1>
-                <div class="qualities-container">
-                    <div class="qualities-list strengths">
-                        <ul>
-                            ${user.quality.strengths.map(quality => `
-                                <li>${quality}</li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                    <div class="qualities-list weaknesses">
-                        <ul>
-                            ${user.quality.weaknesess.map(quality => `
-                                <li>${quality}</li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="knowledge hidden">
-                <h1 class="title">Knowledge</h1>
-                <h2 class="subtitle">Languages</h2>
-                <aside class="languages">
+            <section class="section knowledge">
+                <h2 class="section__title">Knowledge</h2>
+                <h3 class="knowledge__subtitle">Languages</h3>
+                <aside class="knowledge__section languages">
                     ${user.knowledge.languages.map(language => `
-                        <p><span>${language.level} </span>${language.name}</p>
+                        <p class="language"><span>${language.level} </span>${language.name}</p>
                     `).join('')}
-                </aside>
-                <h2 class="subtitle">Programming Languages</h2>
-                <aside class="program-languages">
+                </aside><hr>
+                <h3 class="knowledge__subtitle">Programming Languages</h3>
+                <aside class="knowledge__section program-languages">
                     ${user.knowledge.programLanguages.map(language => `
                         <div class="program-language">
                             <label for="${language.id}">${language.name}</label>
-                            <meter id="html" min="0" max="100" value="${language.level}"></meter>
+                            <meter id="${language.name}" min="0" max="100" value="${language.level}"></meter>
                         </div>
                     `).join('')}
-                </aside>
-                <h2 class="subtitle">IDE'S</h2>
-                <aside class="ides">
-                    ${user.knowledge.ides.map(ide => `
-                        <div class="ide">
-                            <div class="ide-image">
-                                <img src="${ide.icon}" alt="${ide.name}">
+                </aside><hr>
+                <h3 class="knowledge__subtitle">Methodologies</h3>
+                <ul class="knowledge__section list">
+                    <li>BEM</li>
+                </ul><hr>
+                <h3 class="knowledge__subtitle">Technologies</h3>
+                <ul class="knowledge__section technologies">
+                    ${user.knowledge.technologies.map(technology => `
+                        <li class="technology">
+                            <div class="technology__icon">
+                                <img src="${technology.icon}" alt="">
                             </div>
-                            <h4>${ide.name}</h4>
-                        </div>
+                            <p class="technology__name">${technology.name}</p>
+                        </li>
                     `).join('')}
-                </aside>
-                <h2 class="subtitle">OTHERS</h2>
-                <aside class="others">
-                    ${user.knowledge.others.map(other => `
-                        <div class="other">
-                            <div class="other-image">
-                                <img src="${other.icon}" alt="${other.name}">
-                            </div>
-                            <h4>${other.name}</h4>
-                        </div>
-                    `).join('')}
-                </aside>
+                </ul>
             </section>
-            <section class="hobbies hidden">
-                <h1 class="title">My Hobbies</h1>
-                <div class="hobbies-container">
+            <section class="hobbies">
+                <h2 class="section__title">My Hobbies</h2>
+                <aside class="hobbies__content">
                     ${user.hobbies.map(hobbie => `
                         <div class="hobbie">
-                            <div class="hobbie-image">
-                                <img src=${hobbie.icon} alt="${hobbie.name}"/>
+                            <div class="hobbie__icon">
+                                <img src=${hobbie.icon} alt=""/>
                             </div>
-                            <h4>${hobbie.name}</h4>
+                            <p class="hobbie__name">${hobbie.name}</p>
                         </div>
                     `).join('')}
-                </div>
+                </aside>
             </section>
-            <section class="projects hidden" id="projects">
-                <h1 class="title">Projects</h1>
-                <div class="cards main--cards">
+            <section class="section projects" id="projects">
+                <h2 class="section__title">Projects</h2>
+                <aside class="projects__content projects_home">
                     ${Project(user.projects.webPages[0])}
                     ${Project(user.projects.webPages[1])}
                     ${Project(user.projects.webPages[2])}
-                </div>
-                <button class="projects-button">
-                    <a href="#portfolio">Show More</a>
-                </button>
+                </aside>
+                <a class="button-link projects__link" href="#portfolio">Show More</a>
             </section>
         </main>
     `;

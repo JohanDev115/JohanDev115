@@ -1,0 +1,15 @@
+@import "components/globals";
+@import "components/blocks/header";
+@import "components/blocks/icon-link";
+@import "components/blocks/section";
+@import "components/blocks/list";
+@import "components/blocks/button";
+@import "components/blocks/button-link";
+@import "components/blocks/project-card";
+@import "templates/header";
+@import "pages/home/home";
+@import "pages/portfolio/portfolio";
+@import "pages/blog/blog";
+@import "pages/biography/biography.scss";
+@import "templates/footer";
+@import "./components/animations.scss";

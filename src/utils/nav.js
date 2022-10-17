@@ -1,6 +1,6 @@
-import Iportfolio from '@images/icons/portfolio.png';
-import Iblog from '@images/icons/blogging.png';
-import Ibiography from '@images/icons/biography.png';
+import Iportfolio from '@images/icons/portfolio.svg';
+import Iblog from '@images/icons/blogging.svg';
+import Ibiography from '@images/icons/biography.svg';
 
 const nav = [
     {

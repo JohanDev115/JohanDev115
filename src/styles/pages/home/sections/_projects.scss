@@ -1,0 +1,13 @@
+.projects {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+  &__content {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin-bottom: 20px;
+  }
+}
