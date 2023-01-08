@@ -43,16 +43,28 @@
   }
 }
 
+.methodologies li {
+  display: inline-block;
+  margin-left: 14px;
+  font-size: $p;
+}
+
+.methodologies li:nth-child(1) {
+  margin-left: 0;
+}
+
+.methodologies li::before {
+  content: "- ";
+}
+
 .technologies {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-evenly;
-  // list-style: none;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 24px;
 }
 
 .technology {

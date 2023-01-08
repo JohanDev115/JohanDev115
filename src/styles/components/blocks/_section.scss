@@ -1,5 +1,6 @@
 .section {
     width: 100%;
+    height: max-content;
     max-width: 560px;
     padding: $p-section;
     background-color: $sections-color;
@@ -9,5 +10,11 @@
         margin-bottom: 20px;
         font-size: 2.6rem;
         text-align: center;
+    }
+    a {
+        color: #0FFFFB;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
     }
 }

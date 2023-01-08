@@ -6,7 +6,7 @@ const Home = () => {
     const view = `
         <header class="header header_home">
             <aside class="banner fadeInLeft">
-                <a href="/" class="banner__logo fadeInLeft">
+                <a href="/JohanDev115/index.html" class="banner__logo fadeInLeft">
                     <img src="${user.logo}" alt="refresh page">
                 </a>
                 <h1 class="banner__title">${user.name}</h1>
@@ -109,21 +109,45 @@ const Home = () => {
                         </div>
                     `).join('')}
                 </aside><hr>
-                <h3 class="knowledge__subtitle">Methodologies</h3>
-                <ul class="knowledge__section list">
-                    <li>BEM</li>
-                </ul><hr>
-                <h3 class="knowledge__subtitle">Technologies</h3>
-                <ul class="knowledge__section technologies">
-                    ${user.knowledge.technologies.map(technology => `
-                        <li class="technology">
-                            <div class="technology__icon">
-                                <img src="${technology.icon}" alt="">
-                            </div>
-                            <p class="technology__name">${technology.name}</p>
-                        </li>
+                <!--<h3 class="knowledge__subtitle">Methodologies</h3>
+                <ul class="knowledge__section methodologies">
+                    ${user.knowledge.methodologies.map(methodology => `
+                        <li>${methodology}</li>
                     `).join('')}
-                </ul>
+                </ul><hr>-->
+                <h3 class="knowledge__subtitle">Frameworks</h3>
+                <aside class="knowledge__section technologies">
+                    ${user.knowledge.technologies.frameworks.map(framework => `
+                        <div class="technology">
+                            <div class="technology__icon">
+                                <img src="${framework.icon}" alt="">
+                            </div>
+                            <p class="technology__name">${framework.name}</p>
+                        </div>
+                    `).join('')}
+                </aside>
+                <h3 class="knowledge__subtitle">Design</h3>
+                <aside class="knowledge__section technologies">
+                    ${user.knowledge.technologies.design.map(design => `
+                        <div class="technology">
+                            <div class="technology__icon">
+                                <img src="${design.icon}" alt="">
+                            </div>
+                            <p class="technology__name">${design.name}</p>
+                        </div>
+                    `).join('')}
+                </aside>
+                <h3 class="knowledge__subtitle">Others</h3>
+                <aside class="knowledge__section technologies">
+                    ${user.knowledge.technologies.others.map(other => `
+                        <div class="technology">
+                            <div class="technology__icon">
+                                <img src="${other.icon}" alt="">
+                            </div>
+                            <p class="technology__name">${other.name}</p>
+                        </div>
+                    `).join('')}
+                </aside>
             </section>
             <section class="hobbies">
                 <h2 class="section__title">My Hobbies</h2>

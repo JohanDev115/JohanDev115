@@ -19,7 +19,13 @@ const Portfolio = () => {
                         ${user.projects.videoGames.map(videoGame => Project(videoGame)).join('')}
                     </div>
                 </section>
-                <a class="projects-container__button button-link" href="/">Go Home</a>
+                <section class="project-section videogames">
+                    <h1 class="title videogames__title project-section__title">Challenges</h1>
+                    <div class="projects-card">
+                        ${user.projects.challenges.map(challenge => Project(challenge)).join('')}
+                    </div>
+                </section>
+                <a class="projects-container__button button-link" href="/JohanDev115/index.html">Go Home</a>
             </section>
         </main>
     `;

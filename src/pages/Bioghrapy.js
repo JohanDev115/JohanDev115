@@ -30,7 +30,7 @@ const Biography = () => {
                         `).join('')}
                     </ul>
                 </div>
-                <a class="button-link biography__button" href="/">Go Home</a>
+                <a class="button-link biography__button" href="/JohanDev115/index.html">Go Home</a>
             </section>
         </main>
     `;
