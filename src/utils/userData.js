@@ -34,6 +34,7 @@ import Icolombia from '@images/projects/colombia.webp';
 import InotificationsPage from '@images/projects/notificationsPage.webp';
 import ItaskManager from '@images/projects/taskManager.webp';
 import InewsHomepage from '@images/projects/newshomepage.webp';
+import ILHHM from '@images/projects/LHHM.webp';
 
 const user = {
     name: "JohanDev",
@@ -82,6 +83,15 @@ const user = {
                 "Maintain and design the web applications of one of the best real estate networks in Colombia.",
                 "Implement navigation and comfort strategies for users",
                 "Provide support to application logic and implementation problems."
+            ]
+        },
+        {
+            name: "TaskUs, Web Creator Specialist",
+            date: "Jan 2023 - Now",
+            obligations: [
+                "Give support to our customers",
+                "Keep conversation in English with real English Speakers",
+                "Use professionals tools for the web creation process"
             ]
         },
     ],
@@ -227,6 +237,12 @@ const user = {
     ],
     projects: {
         webPages: [
+            {
+                title: "Real Client Project",
+                description: "Light house homes mallorca, inmobiliaria desde 1992, ofreciendo un abanico de inmuebles, tanto en propiedad como otras series de inmuebles: villas, casas, parcelas, hoteles, apartamentos, terrenos rústicos.",
+                image: ILHHM,
+                link: "https://lighthousehomesmallorca.com/",
+            },
             {
                 title: "Task Manager",
                 description: "Task Manager is a totally functional web app created with React applyng the bases of the library using the react states and components structures. following the react courses at PLATZI",
