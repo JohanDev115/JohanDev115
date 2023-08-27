@@ -35,6 +35,8 @@ import InotificationsPage from '@images/projects/notificationsPage.webp';
 import ItaskManager from '@images/projects/taskManager.webp';
 import InewsHomepage from '@images/projects/newshomepage.webp';
 import ILHHM from '@images/projects/LHHM.webp';
+import INewsLetterForm from '@images/projects/newsletter-sign-up-form.webp';
+import Ieztor from '@images/projects/eztor.webp';
 
 const user = {
     name: "JohanDev",
@@ -278,6 +280,12 @@ const user = {
                 description: "Colombia is a simple page made to put in pratice the layaout and animations on web pages which objective might more appreciated in desktop a view.",
                 image: Icolombia,
                 link: "https://johandev115.github.io/colombia/"
+            },
+            {
+                title: "Eztor",
+                description: "Eztor is an ecommerce project created with react and tailwind that consumes an API to show dynamic content with help of react-router to manage the navigation and a global context that allows every part of the application to manage the products states.",
+                image: Ieztor,
+                link: "https://eztor.netlify.app/"
             }
         ],
         videoGames: [
@@ -300,6 +308,12 @@ const user = {
                 description: "This is a solution to the <a href='https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl/hub/news-homepage-O8fWdbL7yi' target='_blank'>News Homepage challenge on Frontend Mentor</a>. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
                 image: InewsHomepage,
                 link: "https://johandev115.github.io/news-homepage/",
+            },
+            {
+                title: "Newsletter sign-up form",
+                description: "This is a solution to the <a href='https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv' target='_blank'>Newsletter sign-up form with success message challenge on Frontend Mentor</a>. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+                image: INewsLetterForm,
+                link: "https://johandev115.github.io/Newsletter-sign-up-form/",
             }
         ]
     },
